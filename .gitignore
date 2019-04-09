@@ -22,7 +22,7 @@ $RECYCLE.BIN/
 # Operating System Files
 # =========================
 
-/target/
+/BlogDiary/target/
 !.mvn/wrapper/maven-wrapper.jar
 /logs/
 
