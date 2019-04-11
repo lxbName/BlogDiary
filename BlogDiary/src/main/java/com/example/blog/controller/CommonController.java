@@ -2,8 +2,6 @@ package com.example.blog.controller;
 
 import com.example.blog.services.CommonService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.http.HttpRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -28,9 +26,9 @@ public class CommonController {
         String userPassword = request.getParameter("userPassword");
         System.out.println("你输入的用户名为："+ id);
         System.out.println("你输入的密码为："+ userPassword);
-        String name = commonService.login(id,userPassword);
-        session.setAttribute("userName",name);
-        if(name == null){
+        String userName = commonService.login(id,userPassword);
+        session.setAttribute("userName",userName);
+        if(userName == null){
             return "redirect:/";
         } else {
             return "redirect:/index";
