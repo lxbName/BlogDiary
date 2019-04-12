@@ -24,7 +24,7 @@ public class CommonController {
     public String login(HttpServletRequest request, HttpSession session){
         String id = request.getParameter("id");
         String userPassword = request.getParameter("userPassword");
-        System.out.println("你输入的用户名为："+ id);
+        System.out.println("你输入的用户ID为："+ id);
         System.out.println("你输入的密码为："+ userPassword);
         String userName = commonService.login(id,userPassword);
         session.setAttribute("userName",userName);
