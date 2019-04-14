@@ -3,7 +3,7 @@
 <mapper namespace="com.example.blog.mapper.Common">
 
     <select id="login" resultType="String">
-        select userName from user where id=#{id} and userPassword=#{userPassword}
+        select userName from tab_user where id=#{id} and userPassword=#{userPassword}
     </select>
 
     <!--<resultMap id="loginMap" type="com.example.blog.entity.user">-->
