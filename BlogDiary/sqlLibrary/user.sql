@@ -5,7 +5,7 @@
  Source Server Type    : MySQL
  Source Server Version : 80011
  Source Host           : 192.168.20.28:3306
- Source Schema         : eginenviro
+ Source Schema         : blogDiary
 
  Target Server Type    : MySQL
  Target Server Version : 80011
@@ -18,10 +18,10 @@ SET NAMES utf8mb4;
 SET FOREIGN_KEY_CHECKS = 0;
 
 -- ----------------------------
--- Table structure for user
+-- Table structure for Tab_User
 -- ----------------------------
-DROP TABLE IF EXISTS `user`;
-CREATE TABLE `user`  (
+DROP TABLE IF EXISTS `Tab_User`;
+CREATE TABLE `Tab_User`  (
   `id` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `userName` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
   `userPassword` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
@@ -29,8 +29,8 @@ CREATE TABLE `user`  (
 ) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
--- Records of user
+-- Records of Tab_User
 -- ----------------------------
-INSERT INTO `user` VALUES ('123', 'admin', '123');
+INSERT INTO `Tab_User` VALUES ('123', 'admin', '123');
 
 SET FOREIGN_KEY_CHECKS = 1;
