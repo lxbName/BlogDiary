@@ -2,6 +2,14 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.example.blog.mapper.CommonMapper">
 
+    <!--<select id="login" resultType="String">-->
+    <!--select userName from tab_user where id=#{id} and userPassword=#{userPassword}-->
+    <!--</select>-->
 
+    <!--<resultMap id="loginMap" type="com.example.blog.entity.user">-->
+    <!--<collection property="id" column="id"></collection>-->
+    <!--<collection property="userName" column="userName"></collection>-->
+    <!--<collection property="userPassword" column="userPassword"></collection>-->
+    <!--</resultMap>-->
 
 </mapper>
