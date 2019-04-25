@@ -1,19 +1,21 @@
 package com.example.blog.controller;
 
 import com.example.blog.services.CommonService;
+import com.example.blog.services.impl.CommonServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
-@Controller
+@RestController
 public class CommonController {
 
     @Autowired
-    public CommonService commonService;
+    public CommonServiceImpl commonService;
 
     @RequestMapping(value = "/", method = {RequestMethod.POST,RequestMethod.GET})
     public String login(){

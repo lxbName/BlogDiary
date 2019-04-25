@@ -1,17 +1,7 @@
 package com.example.blog.services;
 
-import com.example.blog.mapper.Common;
-import org.apache.ibatis.annotations.Param;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
+public interface CommonService {
 
-@Service
-public class CommonService {
+    public String login(String id,String userPassword);
 
-    @Autowired
-    public Common commonmapper;
-
-    public String login(String id,String userPassword){
-        return commonmapper.login(id,userPassword);
-    }
 }

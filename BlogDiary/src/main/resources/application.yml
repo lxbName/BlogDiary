@@ -22,7 +22,7 @@ spring:
 #mybatis-plus
 mybatis-plus:
   config-locations:
-  mapper-locations: classpath:/mapper/**/*Mapper.xml
+  mapper-locations: classpath:mapper/*.xml
   type-aliases-package: com.example.blog.**.entity  #在每个模块下创建entity包即可扫描到
   global-config:
     db-config:
