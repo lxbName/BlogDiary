@@ -18,11 +18,9 @@ public class UserController {
 
     //@RequestMapping(value = "/userAdd",method = {RequestMethod.POST,RequestMethod.GET}) //第一种写法
     @PostMapping("/userAdd")
-    @ResponseBody
     public Object userAdd(@RequestBody user userEx){
         userService.save(userEx);
-        System.out.println("useradd----------------");
-        return ResultUtil.getResult(200,"人员保存成功",true);
+        return ResultUtil.getResult(200,"人员保存成功",true,"userAdd");
     }
 
 }
