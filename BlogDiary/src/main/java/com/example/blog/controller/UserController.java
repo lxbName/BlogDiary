@@ -23,4 +23,10 @@ public class UserController {
         return ResultUtil.getResult(200,"人员保存成功",true,"userAdd");
     }
 
+    @PostMapping("/userUpdate")
+    public Object userUpdate(@RequestBody user userEx){
+        userService.updateById(userEx);
+        return ResultUtil.getResult(200,"人员更新成功",true,"userUpdate");
+    }
+
 }
