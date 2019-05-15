@@ -1,5 +1,6 @@
 package com.example.blog.controller;
 
+import com.example.blog.common.ResultUtil;
 import com.example.blog.services.CommonService;
 import com.example.blog.services.impl.CommonServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,18 +24,19 @@ public class CommonController {
     }
 
     @RequestMapping(value = "/loginPage",method = {RequestMethod.POST,RequestMethod.GET})
-    public String login(HttpServletRequest request, HttpSession session){
+    public Object login(HttpServletRequest request, HttpSession session){
         String id = request.getParameter("id");
         String userPassword = request.getParameter("userPassword");
         System.out.println("你输入的用户ID为："+ id);
         System.out.println("你输入的密码为："+ userPassword);
         String userName = commonService.login(id,userPassword);
         session.setAttribute("userName",userName);
-        if(userName == null){
-            return "redirect:/";
-        } else {
-            return "redirect:/index";
-        }
+        return ResultUtil.getResult(200,"登录成功",true,userName);
+//        if(userName == null){
+//            return "redirect:/";
+//        } else {
+//            return "redirect:/index";
+//        }
     }
 
     @RequestMapping(value = "/index",method = {RequestMethod.POST,RequestMethod.GET})

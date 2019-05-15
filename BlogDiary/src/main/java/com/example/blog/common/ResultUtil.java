@@ -1,11 +1,13 @@
 package com.example.blog.common;
 
 
+import com.example.blog.common.enums.ExceptionMsgEnum;
+
 public class ResultUtil {
 
-//    public static Result getResult(ExceptionMsgEnum emenum){
-//        return getResult(emenum.getValue(),emenum.getDesc(),false);
-//    }
+    public static Result getResult(ExceptionMsgEnum emenum){
+        return getResult(emenum.getValue(),emenum.getDesc(),false);
+    }
 
     public static Result ok(){
         return ok(null);
