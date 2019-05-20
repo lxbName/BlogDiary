@@ -36,4 +36,12 @@ public class UserController {
         return ResultUtil.getResult(200,"人员更新成功",true,"userUpdate");
     }
 
+    @PostMapping("/userDelect")
+    public Object userDelect(@RequestBody List<user> userDelList){
+        for (user userFor: userDelList) {
+            userService.removeById(userFor.id);
+        }
+        return ResultUtil.getResult(200,"人员删除成功",true,"userDelect");
+    }
+
 }
