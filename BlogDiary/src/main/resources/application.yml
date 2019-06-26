@@ -19,6 +19,12 @@ spring:
 #mybatis:
   #mapperLocations: classpath:/mapper/**/*Mapper.xml
 
+#tomcat
+tomcat:
+  min-spare-threads: 20   #初始化线程是20
+  max-threads: 100        #最大线程数是100
+  connection-timeout: 5000 #超时时间是5000ms
+
 #mybatis-plus
 mybatis-plus:
   config-locations:
