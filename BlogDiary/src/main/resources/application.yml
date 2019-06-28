@@ -65,3 +65,6 @@ mybatis-plus:
     #配置JdbcTypeForNull, oracle数据库必须配置
     jdbc-type-for-null: 'null'
     call-setters-on-nulls: true
+
+swagger:
+  enabled:true
